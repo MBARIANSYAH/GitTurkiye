@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Montserrat";
+}
+:root {
+  --bg-color: #fbfdfb;
+  --main-color: #1e90ff;
+  --secondary: #b90e0a;
+  --bg-second: #6495ed;
+}
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--bg-color);
+}
+body {
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: 0.3s;
+  height: 15vh;
+  background: rgba(15, 15, 15, 0.5); /* Warna gelap transparan */
+  backdrop-filter: blur(6px); /* (opsional) memberi efek blur di belakang navbar */
+}
+header .logo {
+  font-size: 1.7rem;
+}
+ul.navlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navlist li {
+  margin: 0 1rem;
+}
+.navlist li a {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  color: var(--bg-color);
+  transition: color 0.3s ease;
+}
+.navlist li a:hover {
+  color: var(--main-color);
+}
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navlist li a:hover::after {
+  transform: scaleX(1);
+}
+section {
+  padding: 90px 8%;
+}
+.home {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 4em;
+  background: url(Image/Kelas.jpg);
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: center;
+}
+.home .hero-info {
+  font-size: 3rem;
+  color: var(--bg-color);
+}
+.home .hero-info p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 25px;
+}
+.home .hero-info button {
+  border-radius: 50px;
+  width: 35%;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-top: 25px;
+  font-weight: 700;
+  color: var(--bg-color);
+  background-color: #8ca3e8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.hero-info button:hover {
+  color: var(--bg-color);
+  background-color: var(--main-color);
+}
+.about h2,
+.profil h1,
+.visi h1,
+.univ h1 {
+  font-size: 2.7rem;
+  color: var(--bg-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px #000;
+}
+.about .row {
+  display: flex;
+}
+.about {
+  background-color: var(--main-color);
+}
+.about-img img {
+  border-radius: 50%;
+  width: 70%;
+}
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.about .row .content h3,
+.profil-img h3 {
+  color: var(--bg-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.about .row .content p,
+.visi p {
+  color: var(--bg-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+.profil {
+  background-color: var(--main-color);
+}
+.profil-img img {
+  display: flex;
+  border-radius: 50%;
+  margin-bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.profil-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profil-img h4 {
+  color: var(--bg-color);
+  font-weight: 400;
+}
+.profil-img .profil-text {
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.profil-img .profil-text h1 {
+  font-weight: 400;
+  margin: 0;
+  gap: 20px;
+  font-size: 2.3rem;
+}
+.profil-text .medsos {
+  display: flex;
+  color: var(--bg-color);
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.profil-text .medsos i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+}
+.visi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-right: 3rem;
+  flex-direction: column;
+}
+.logo-univ {
+  text-align: center;
+  padding: 60px 20px;
+  background: url(Image/istanbul.jpeg) no-repeat center center/cover;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-univ h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.benefit {
+  background-color: var(--bg-color);
+  padding: 4rem 2rem;
+}
+
+.benefit-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.benefit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-content h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.garis-kuning {
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+  margin-top: 2rem;
+}
+
+.image-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.benefit h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
