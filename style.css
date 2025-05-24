@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
   font-family: "Montserrat";
 }
+
 :root {
   --bg-color: #fbfdfb;
   --main-color: #1e90ff;
@@ -99,12 +100,12 @@ section {
   font-size: 1.1rem;
   margin-top: 25px;
 }
-.home .hero-info button {
+.home .hero-info a {
   border-radius: 50px;
-  width: 35%;
+  width: 100%;
   border: none;
-  padding: 15px;
-  font-size: 1.1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
   margin-top: 25px;
   font-weight: 700;
   color: var(--bg-color);
@@ -162,49 +163,37 @@ section {
 .profil {
   background-color: var(--main-color);
 }
+.profil-container {
+  display: flex;
+  /* tambahkan ini untuk kontrol jarak */
+  align-items: center; /* agar vertikalnya sejajar */
+  justify-content: center;
+  flex-wrap: wrap; /* agar rapi di layar kecil */
+}
+
 .profil-img img {
-  display: flex;
+  width: 300px; /* atau sesuaikan ukuran gambar */
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
-  margin-bottom: 5rem;
-  justify-content: center;
-  align-items: center;
 }
-.profil-img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.profil-img h4 {
-  color: var(--bg-color);
-  font-weight: 400;
-}
-.profil-img .profil-text {
-  display: flex;
-  margin-left: 5rem;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-.profil-img .profil-text h1 {
-  font-weight: 400;
-  margin: 0;
-  gap: 20px;
-  font-size: 2.3rem;
+
+.profil-text {
+  max-width: 400px;
+  text-align: center;
 }
 .profil-text .medsos {
   display: flex;
-  color: var(--bg-color);
-  gap: 12px;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.profil-text .medsos i {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.8rem;
+  color: var(--bg-color);
+}
+.profil-text h4 {
+  margin-top: -20px;
+  color: var(--bg-color);
+  font-weight: 500;
 }
 .visi {
   display: flex;
@@ -305,4 +294,113 @@ section {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 5rem;
+}
+.goals .visi-misi {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.foot-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-contain {
+  max-width: 1170px;
+
+  margin: auto;
+}
+ul {
+  list-style: none;
+}
+
+.foot-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.foot-col h4 {
+  font-size: 1.9rem;
+  color: var(--bg-color);
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  font-weight: 500;
+  position: relative;
+}
+.foot-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--main-color);
+  height: 2px;
+  box-sizing: border-box;
+  width: 100px;
+}
+.foot-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.foot-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: 400;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.foot-col ul li a:hover {
+  color: var(--main-color);
+  padding-left: 8px;
+}
+.foot-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: grey;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--bg-color);
+  transition: all 0.5s ease;
+}
+.foot-col .social-links a:hover {
+  color: #24262b;
+  background-color: var(--main-color);
+}
+
+/* Responsive
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .goals .visi-misi {
+    flex-wrap: wrap;
+  }
+  .logo-univ .logo-wrap .logo-container {
+    flex-wrap: wrap;
+  }
+  .profil-img img {
+    width: 100%;
+  }
+  .profil-container {
+    flex-wrap: wrap;
+  }
+  .foot-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .foot-col {
+    width: 100%;
+  }
 }
