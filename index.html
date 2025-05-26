@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="style.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,40 +15,68 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        will-change: opacity, transform;
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .navbar-extra a i {
+        font-size: 1.5rem;
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="overlay"></div>
-    <header>
+    <header class="fade-up">
       <img src="Image/Screenshot_20231107_082654_Instagram.avif" class="logo" alt="" width="80" />
       <ul class="navlist">
         <li><a href="#home">Beranda</a></li>
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#benefit">Benefit</a></li>
-        <li><a href="fasilitas.html">Fasilitas</a></li>
-        <li><a href="fasilitas.html">Kontak</a></li>
+        <li><a href="fasilitas.html#facility">Fasilitas</a></li>
+        <li><a href="fasilitas.html#kontak">Kontak</a></li>
       </ul>
+      <div class="navbar-extra">
+        <a href="javascript:void(0)" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+      </div>
     </header>
-    <!-- Beranda -->
-    <section id="home" class="home">
+
+    <!-- Sidebar -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <a href="#home">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#benefit">Benefit</a>
+      <a href="fasilitas.html#facility">Fasilitas</a>
+      <a href="fasilitas.html#kontak">Kontak</a>
+    </nav>
+    <!-- Sidebar End-->
+
+    <section id="home" class="home fade-up">
       <div class="hero-info">
         <h3>Yuk, Kuliah ke Turkiye!</h3>
-
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sit, praesentium <br />
           obcaecati non odio nisi?
         </p>
-        <a href="fasilitas.html">BERGABUNG</a>
+        <a href="fasilitas.html#kontak">BERGABUNG</a>
       </div>
     </section>
-    <!-- Beranda End -->
 
-    <section id="tentang" class="about">
+    <section id="tentang" class="about fade-up">
       <h2><span>Tentang</span> Turkiye</h2>
       <div class="row">
         <div class="about-img">
           <img src="Image/Istanbul-University.webp" alt="" />
         </div>
-
         <div class="content">
           <h3>Kenapa Memilih Git Turkiye?</h3>
           <p>
@@ -59,7 +86,7 @@
         </div>
       </div>
       <div class="goals" style="display: flex; flex-direction: row">
-        <div class="visi-misi">
+        <div class="visi-misi fade-up">
           <div class="visi">
             <h1>VISI</h1>
             <p>
@@ -71,15 +98,14 @@
             <h1>MISI</h1>
             <p>
               Memberikan informasi yang akurat, lengkap, dan terkini seputar Pendidikan tinggi di Negara Turki kepada calon mahasiswa di Sekolah, di Masyarakat, dan kepada orang tua calon mahasiswa itu sendiri. Menyediakan layanan bimbingan
-              secara akademik, Bahasa, dan administrasi untuk mempersiapkan siswa dalam menghadapi proses masuk Universitas di Turki. Memberikan pendampingan khusus kepada siswa selama proses studi di Turki.
+              secara akademik, Bahasa, dan administrasi untuk mempersiapkan siswa dalam menghadapi proses masuk Universitas di Turki. Memberikan pendampingan khusus kepada siswa selama proses studi di Turki..
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Profil -->
-    <section class="profil" id="profil">
+    <section class="profil fade-up" id="profil">
       <h1>CEO & Founder</h1>
       <div class="profil-container">
         <div class="profil-img">
@@ -90,18 +116,13 @@
           <h4>CEO & Founder of GitTurkiye Education</h4>
           <br />
           <div class="medsos">
-            <p><i class="fa-solid fa-envelope" style="color: white"></i> Hanna@gmail.com</p>
-          </div>
-
-          <div class="medsos">
-            <p><i class="fa-brands fa-instagram" style="color: white"></i> Hanna@gmail.com</p>
+            <p style="font-size: 1.5rem"><i class="fa-brands fa-instagram" style="color: white"></i> hj_gita_banjarmasin</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- Profil End -->
-    <!-- Univ Start -->
-    <section class="logo-univ" id="logo-univ">
+
+    <section class="logo-univ fade-up" id="logo-univ">
       <h1>DAFTAR UNIVERSITAS TURKI</h1>
       <div class="logo-wrap">
         <div class="logo-container">
@@ -118,12 +139,11 @@
         </div>
       </div>
     </section>
-    <!-- Univ End -->
-    <!-- Benefit Start -->
-    <section class="benefit" id="benefit">
+
+    <section class="benefit fade-up" id="benefit">
       <div class="benefit-container">
         <h1>Benefit</h1>
-
+        <!-- Benefit Rows -->
         <div class="benefit-row">
           <div class="text-content">
             <h2><i class="fa-solid fa-money-bill"></i> Biaya Hidup Terjangkau</h2>
@@ -172,38 +192,59 @@
         </div>
       </div>
     </section>
-    <!-- Benefit End -->
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer fade-up">
       <div class="footer-contain">
         <div class="foot-row">
           <div class="foot-col">
+            <h4>Get In Touch</h4>
+            <ul>
+              <li><a href="https://maps.app.goo.gl/XQRN3s5CWv7rJRuj9?g_st=ic">Jl. AMD Pemurus Indah No 16 Jalur 1, Banjarmasin, Kalimantan Selatan, Indonesia</a></li>
+            </ul>
+          </div>
+          <div class="foot-col">
             <h4>Stay Connected</h4>
-            <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">About us</a></li>
-            </ul>
-          </div>
-          <div class="foot-col">
-            <h4>Adress</h4>
-            <ul>
-              <li><a href="#">Alamat</a></li>
-              <li><a href="#">Kantor</a></li>
-              <li><a href="#">Turkiye</a></li>
-            </ul>
-          </div>
-          <div class="foot-col">
-            <h4>Social Media</h4>
             <div class="social-links">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <p style="margin-bottom: 1rem; color: #fdfdfd">WhatsApp : +62-821-5675-1653 / +62-821-5314-1460</p>
+              <p style="margin-bottom: 1rem; color: #fdfdfd">Email Kami : gitturkiyeagency@gmail.com</p>
+              <a href="https://www.instagram.com/git.turkiye?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              el.classList.add("visible");
+              el.style.transitionDelay = index * 0.1 + "s";
+              observer.unobserve(el);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+
+      document.querySelectorAll(".fade-up").forEach((el) => {
+        observer.observe(el);
+      });
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobile-nav");
+      const closeBtn = document.getElementById("close-btn");
+
+      hamburger.addEventListener("click", () => {
+        mobileNav.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileNav.classList.remove("active");
+      });
+    </script>
   </body>
-  <script src="script.js"></script>
 </html>
