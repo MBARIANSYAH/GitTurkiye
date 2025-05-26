@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitTurkiye - Fasilitas & Form</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
       body {
@@ -124,6 +132,22 @@
       input:active {
         border: 1px solid #1e90ff;
       }
+      .footer {
+        background-color: #24262b;
+        padding: 70px 0;
+      }
+      .foot-row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .footer-contain {
+        max-width: 1170px;
+
+        margin: auto;
+      }
+      ul {
+        list-style: none;
+      }
 
       /* Animasi fade-in ala Wix */
       .fade-up {
@@ -148,10 +172,23 @@
           justify-content: center;
           align-items: center;
         }
+        .foot-col ul li a {
+          font-size: 1.5rem;
+        }
       }
     </style>
   </head>
   <body>
+    <header class="fade-up">
+      <img src="Image/Screenshot_20231107_082654_Instagram.avif" class="logo" alt="" width="80" />
+      <ul class="navlist">
+        <li><a href="index.html#home">Beranda</a></li>
+        <li><a href="index.html#tentang">Tentang</a></li>
+        <li><a href="index.html#benefit">Benefit</a></li>
+        <li><a href="fasilitas.html">Fasilitas</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </header>
     <!-- FASILITAS -->
     <section class="facility" id="facility">
       <div class="fasilitas fade-up">
@@ -184,6 +221,26 @@
       </div>
     </section>
 
+    <footer class="footer fade-up">
+      <div class="footer-contain">
+        <div class="foot-row">
+          <div class="foot-col">
+            <h4>Get In Touch</h4>
+            <ul>
+              <li><a href="#">Jl. AMD Pemurus Indah No 16 Jalur 1, Banjarmasin, Kalimantan Selatan, Indonesia</a></li>
+            </ul>
+          </div>
+          <div class="foot-col">
+            <h4>Stay Connected</h4>
+            <div class="social-links">
+              <p style="margin-bottom: 1rem; color: #fdfdfd">WhatsApp : +62-821-5675-1653 / +62-821-5314-1460</p>
+              <p style="margin-bottom: 1rem; color: #fdfdfd">Email Kami : gitturkiyeagency@gmail.com</p>
+              <a href="https://www.instagram.com/git.turkiye?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Intersection Observer untuk efek fade-in saat scroll -->
     <script>
       const observer = new IntersectionObserver(
