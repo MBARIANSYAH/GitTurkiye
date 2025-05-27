@@ -344,8 +344,8 @@ ul {
 }
 .foot-col ul li a {
   display: block;
-  margin-left: -3rem;
-  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
   color: var(--bg-color);
   text-decoration: none;
@@ -408,6 +408,9 @@ ul {
   cursor: pointer;
   color: white;
 }
+.navbar-extra a {
+  display: none;
+}
 /* Responsive
 /* Mobile (≤ 768px) */
 @media (max-width: 768px) {
@@ -433,12 +436,12 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
-  .navbar-extra a i {
-    font-size: 2.5rem;
-    display: flex;
-  }
   .navlist li a {
     display: none;
+  }
+  .navbar-extra a {
+    font-size: 2.5rem;
+    display: block;
   }
 }
 @media (max-width: 574px) {
