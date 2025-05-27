@@ -12,173 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-      body {
-        background-color: #1e90ff;
-        color: #fbfdfb;
-        margin: 0;
-        padding: 0;
-        font-family: "Montserrat";
-      }
-
-      .fasilitas,
-      .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 60px 20px;
-      }
-
-      .fasilitas h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1.5rem;
-        text-shadow: 2px 2px 4px #000;
-      }
-
-      .fasilitas p {
-        margin-bottom: 2.5rem;
-        font-size: 1.2rem;
-        text-align: center;
-        max-width: 700px;
-      }
-
-      .facil-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 2.5rem;
-        flex-wrap: wrap;
-      }
-
-      .facil-container img {
-        margin-bottom: 2rem;
-        max-width: 100%;
-        height: auto;
-      }
-
-      #kontak {
-        background-color: #1e90ff;
-      }
-
-      .form-container h1 {
-        text-shadow: 2px 2px 4px #0e1111;
-        text-align: center;
-        font-size: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      .form-container p {
-        text-align: center;
-        font-size: 1.2rem;
-        margin-bottom: 4rem;
-        max-width: 700px;
-      }
-
-      .form-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 450px;
-        padding: 30px;
-        background: #fbfdfb;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .form-box h1 {
-        color: #0e1111;
-        text-align: center;
-        text-shadow: none;
-        margin-bottom: 2.5rem;
-      }
-
-      input {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 12px;
-        background: #eee;
-        border-radius: 6px;
-        border: 1px solid #333;
-        outline: none;
-        font-size: 1rem;
-        color: #333;
-        margin-bottom: 20px;
-      }
-
-      button {
-        width: 100%;
-        padding: 12px;
-        background: #6495ed;
-        border-radius: 6px;
-        border: none;
-        cursor: pointer;
-        font-size: 1rem;
-        color: #fbfdfb;
-        font-weight: 500;
-        margin-bottom: 20px;
-        transition: 0.5s;
-      }
-
-      button:hover {
-        background: #1e90ff;
-      }
-
-      input:active {
-        border: 1px solid #1e90ff;
-      }
-      .footer {
-        background-color: #24262b;
-        padding: 70px 0;
-      }
-      .foot-row {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .footer-contain {
-        max-width: 1170px;
-
-        margin: auto;
-      }
-      ul {
-        list-style: none;
-      }
-
-      /* Animasi fade-in ala Wix */
-      .fade-up {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        will-change: opacity, transform;
-      }
-
-      .fade-up.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @media (max-width: 768px) {
-        .form-container h1 {
-          font-size: 2.5rem;
-        }
-        .form-box {
-          width: 90%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .foot-col ul li a {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
   </head>
-  <body>
+  <body style="background-color: #1e90ff">
     <header class="fade-up">
       <img src="Image/Screenshot_20231107_082654_Instagram.avif" class="logo" alt="" width="80" />
       <ul class="navlist">
@@ -188,12 +23,23 @@
         <li><a href="fasilitas.html">Fasilitas</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
+      <div class="navbar-extra">
+        <a href="javascript:void(0)" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+      </div>
     </header>
+    <nav class="mobile-nav" id="mobile-nav">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <a href="#home">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#benefit">Benefit</a>
+      <a href="fasilitas.html#facility">Fasilitas</a>
+      <a href="fasilitas.html#kontak">Kontak</a>
+    </nav>
     <!-- FASILITAS -->
     <section class="facility" id="facility">
       <div class="fasilitas fade-up">
-        <h1>FASILITAS</h1>
-        <p>Berikut Fasilitas, Pelayanan dan Souvenir yang didapat saat berpartisipasi menjadi peserta Perguruan Tinggi Kuliah Ke Turki bersama GitTurkiye.</p>
+        <h1 style="color: #fdfdfd">FASILITAS</h1>
+        <p style="color: #fdfdfd">Berikut Fasilitas, Pelayanan dan Souvenir yang didapat saat berpartisipasi menjadi peserta Perguruan Tinggi Kuliah Ke Turki bersama GitTurkiye.</p>
         <div class="facil-container fade-up">
           <img src="Image/gambar/Kursus.avif" alt="Kursus" width="50%" />
           <img src="Image/gambar/souvenir.avif" alt="Souvenir" width="50%" />
@@ -207,8 +53,8 @@
     <!-- FORM PENDAFTARAN -->
     <section id="kontak" class="kontak">
       <div class="form-container fade-up">
-        <h1>FORM PENDAFTARAN</h1>
-        <p>Buat kalian yang tertarik bergabung dengan kami silahkan isi form dibawah untuk mendapatkan E-Mail dari GitTurkiye</p>
+        <h1 style="color: #fdfdfd">FORM PENDAFTARAN</h1>
+        <p style="color: #fdfdfd">Buat kalian yang tertarik bergabung dengan kami silahkan isi form dibawah untuk mendapatkan E-Mail dari GitTurkiye</p>
         <div class="form-box fade-up" id="login-form">
           <form action="">
             <h1>Daftar Sekarang</h1>
@@ -241,7 +87,6 @@
         </div>
       </div>
     </footer>
-    <!-- Intersection Observer untuk efek fade-in saat scroll -->
     <script>
       const observer = new IntersectionObserver(
         (entries, observer) => {
@@ -249,18 +94,29 @@
             if (entry.isIntersecting) {
               const el = entry.target;
               el.classList.add("visible");
-              el.style.transitionDelay = index * 0.1 + "s"; // delay satu per satu
-              observer.unobserve(el); // hanya animasi sekali
+              el.style.transitionDelay = index * 0.1 + "s";
+              observer.unobserve(el);
             }
           });
         },
         {
-          threshold: 0.2,
+          threshold: 0.15,
         }
       );
 
       document.querySelectorAll(".fade-up").forEach((el) => {
         observer.observe(el);
+      });
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobile-nav");
+      const closeBtn = document.getElementById("close-btn");
+
+      hamburger.addEventListener("click", () => {
+        mobileNav.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileNav.classList.remove("active");
       });
     </script>
   </body>
