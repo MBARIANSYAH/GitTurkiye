@@ -553,7 +553,6 @@ ul {
 /* Responsive
 /* Mobile (≤ 768px) */
 @media (max-width: 768px) {
-
   .about .row {
     flex-wrap: wrap;
   }
