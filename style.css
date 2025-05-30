@@ -86,7 +86,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   grid-gap: 4em;
-  background: url(Image/Kelas.jpg);
+  background: url(Image/gambar/landing-page.jpg);
   background-repeat: no-repeat;
   background-size: fill;
   background-position: center;
