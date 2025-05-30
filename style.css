@@ -88,7 +88,7 @@ section {
   grid-gap: 4em;
   background: url(Image/gambar/landing-page.jpg);
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: cover;
   background-position: center;
 }
 .home .hero-info {
