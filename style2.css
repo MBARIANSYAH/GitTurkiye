@@ -604,10 +604,9 @@ h5 {
 }
 
 .team-member img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 50%;
   margin-bottom: 0.5rem;
   border: 3px solid white;
 }
@@ -642,7 +641,9 @@ h5 {
   background-color: #555;
   margin: 0 auto;
 }
-
+.team-member director img {
+  margin-left: 1rem;
+}
 /* Responsive
 /* Mobile (≤ 768px) */
 @media (max-width: 768px) {
